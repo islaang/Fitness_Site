@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Site</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Логотип и навигационное меню -->
+    <header>
+        <div class="logo">
+            <a href="{% url 'index' %}">Логотип</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Главная</a></li>
+                <li><a href="{% url 'nutrition' %}">Спортивное питание</a></li>
+                <li><a href="{% url 'clothing' %}">Спортивная одежда</a></li>
+                <li><a href="{% url 'workouts' %}">Тренировки</a></li>
+                <li><a href="{% url 'chatbot' %}">Советчик (ChatGPT)</a></li>
+                <li><a href="{% url 'cart' %}">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Контент страницы -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Футер --
